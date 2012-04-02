@@ -1,3 +1,4 @@
+
 #banner_wrapper {
   width: 1200px;
   margin-left: auto;
@@ -38,7 +39,13 @@ h2 {
   font-size: 22px;
   margin-top: 0;
 }
-input[type='submit'], input[type='button'], select {
+#search {
+  margin-right: 5px;
+}
+#metanav {
+  padding-bottom: 3px;
+}
+#metanav a, input[type='submit'], input[type='button'], select {
   display:inline-block;
   padding:4px 10px 4px;
   margin-bottom:0;

@@ -86,7 +86,7 @@ h2 {
 .newform form {  padding-left: 35px; }
 
 .newform h2, .newform h3 {  margin-left: 0;}.newform input {  border-radius: 2px;}
-input[type='text'], textarea {
+input[type='password'], input[type='text'], textarea {
   -mox-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;

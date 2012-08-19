@@ -10,21 +10,22 @@ from trac.web.chrome import ITemplateProvider
 from trac.web.api import IRequestFilter, ITemplateStreamFilter
 
 class Theme(Component):
-    implements(IRequestFilter, ITemplateStreamFilter, ITemplateProvider)
-
-    def pre_process_request(self, req, handler):
-        add_stylesheet(req, 'http://fonts.googleapis.com/css?family=Ubuntu')
-        add_stylesheet(req, 'lightertheme/theme.css')
-        return handler
-
-    def post_process_request(self, req, template, data, content_type):
-        return template, data, content_type
+    implements(ITemplateStreamFilter, ITemplateProvider)
 
     def filter_stream(self, req, method, filename, stream, data):
         """
         Wrap the banner and mainnav in a single banner_wrapper div
         """
-        buffer = StreamBuffer()
+
+        add_stylesheet(req, 'http://fonts.googleapis.com/css?family=Ubuntu')
+        add_stylesheet(req, 'lightertheme/theme.css')
+
+        stream |= Transformer("//div[@id='banner']").wrap(tag.div(class_="banner_wrapper banner_wrapper_first"))
+        stream |= Transformer("//div[@id='mainnav']").wrap(tag.div(class_="banner_wrapper banner_wrapper_second"))
+        stream |= Transformer("//div[@class='banner_wrapper banner_wrapper_first']").append(tag.hr())
+        return stream
+
+
         filter = Transformer("//div[@id='banner']")
         stream |= filter.wrap(tag.div(id="banner_wrapper")).end(
             ).select("//div[@id='mainnav']").cut(buffer, accumulate=True).end().buffer(
@@ -43,7 +44,7 @@ class Theme(Component):
         The `abspath` is the absolute path to the directory containing the
         resources on the local file system.
         """
-        return [("lightertheme", resource_filename(__name__, 'htdocs'))]
+        yield "lightertheme", resource_filename(__name__, 'htdocs')
 
     def get_templates_dirs(self):
         """Return a list of directories containing the provided template

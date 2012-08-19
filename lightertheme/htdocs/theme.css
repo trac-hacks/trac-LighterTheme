@@ -1,10 +1,10 @@
 
-#banner_wrapper {
+.banner_wrapper {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   background-color: #eef;
-  -mox-border-radius: 10px;
+  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background-clip: padding-box;
@@ -14,9 +14,29 @@
   padding-right: 10px;
   padding-bottom: 10px;
 }
-#banner_wrapper hr {
+.banner_wrapper hr {
   margin: 0;
 }
+.banner_wrapper_first {
+  margin-bottom: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -moz-border-bottom-left-radius: 0px;
+  -moz-border-bottom-right-radius: 0px;
+}
+.banner_wrapper_second {
+  padding-top: 0px;
+  margin-top: -10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-top-right-radius: 0px;
+  -moz-border-top-left-radius: 0px;
+  -moz-border-top-right-radius: 0px;
+}
+
 #main {
   width: 940px;
   margin-left: auto;

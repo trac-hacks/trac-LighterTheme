@@ -1,0 +1,4 @@
+0.2
+---
+
+* Fix compatibility with other plugins: previously, this plugin would cause other plugins' add_stylesheet() calls to break, because of some incompatibility with Genshi's cut()/buffer() commands.  This is now fixed by avoiding calls to cut() and buffer().

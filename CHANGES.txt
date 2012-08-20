@@ -1,4 +1,12 @@
-0.2
----
+0.2 (20 Aug 2012)
+-----------------
 
-* Fix compatibility with other plugins: previously, this plugin would cause other plugins' add_stylesheet() calls to break, because of some incompatibility with Genshi's cut()/buffer() commands.  This is now fixed by avoiding calls to cut() and buffer().
+Fix compatibility with other plugins: previously, this plugin would
+cause other plugins' add_stylesheet() calls to break, because of some
+incompatibility with Genshi's cut()/buffer() commands.  This is now
+fixed by avoiding calls to cut() and buffer()
+
+0.1 (19 Aug 2012)
+-----------------
+
+Initial release

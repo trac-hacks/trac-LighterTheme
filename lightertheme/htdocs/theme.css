@@ -1,4 +1,7 @@
-
+div.trac-content {
+  border: none;
+  box-shadow: none;
+}
 .banner_wrapper {
   width: 1200px;
   margin-left: auto;
@@ -98,13 +101,17 @@ h2 {
 .newform {
   width: 60%;
   background-color: #FFF7C0;
-  border: 1px solid green;
+  border: 2px solid lavender;
   border-radius: 20px;
   padding: 10px;
   margin-bottom: 30px;
 }
 .newform form {  padding-left: 35px; }
 
+.wikipage .newform h2 {
+  border-bottom: none;
+  box-shadow: none;
+}
 .newform h2, .newform h3 {  margin-left: 0;}.newform input {  border-radius: 2px;}
 input[type='password'], input[type='text'], textarea {
   -mox-border-radius: 10px;

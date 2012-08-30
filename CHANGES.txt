@@ -2,21 +2,32 @@
 Changes
 =======
 
+0.3.0 (?? ??? 2012)
+-------------------
+
+Disable box-shadows and borders around Trac's primary content div --
+these extra lines add unwanted noise in LighterTheme.
+
+Elements with class "newform" now have a lavender border instead of 
+a green border, which looked ugly.  Also disabled some borders and
+box-shadows around newform <h2>s in wikipages; these styles were
+introduced in Trac 1.0 and clash with the "newform" styles.
+
 0.2.1 (24 Aug 2012)
 -------------------
 
 Added MANIFEST.in file; the distribution now includes the necessary CSS 
 assets as well as the code's LICENSE file.
 
-0.2 (20 Aug 2012)
------------------
+0.2.0 (20 Aug 2012)
+-------------------
 
 Fix compatibility with other plugins: previously, this plugin would
 cause other plugins' add_stylesheet() calls to break, because of some
 incompatibility with Genshi's cut()/buffer() commands.  This is now
 fixed by avoiding calls to cut() and buffer()
 
-0.1 (19 Aug 2012)
------------------
+0.1.0 (19 Aug 2012)
+-------------------
 
 Initial release

@@ -2,6 +2,12 @@
 Changes
 =======
 
+0.2.1 (24 Aug 2012)
+-------------------
+
+Added MANIFEST.in file; the distribution now includes the necessary CSS 
+assets as well as the code's LICENSE file.
+
 0.2 (20 Aug 2012)
 -----------------
 

@@ -106,8 +106,16 @@ h2 {
   padding: 10px;
   margin-bottom: 30px;
 }
-.newform form {  padding-left: 35px; }
+.newform form {  
+  padding-left: 1em;
+  padding-top: 0.5em;
+}
 
+.newform .subheading {
+  padding: 0.2em .6em .1em;
+  font-style: italic;
+  margin-top: -1em; /* push it closer to the h2 that it's expected to lie under */
+}
 .wikipage .newform h2 {
   border-bottom: none;
   box-shadow: none;

@@ -2,7 +2,7 @@
 Changes
 =======
 
-0.3.0 (?? ??? 2012)
+0.3.0 (02 Oct 2012)
 -------------------
 
 Disable box-shadows and borders around Trac's primary content div --

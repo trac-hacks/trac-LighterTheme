@@ -41,7 +41,7 @@ class Theme(Component):
         add_stylesheet(req, '/lightertheme/theme.css')
 
         stream |= Transformer("//div[@id='banner']").wrap(tag.div(class_="banner_wrapper banner_wrapper_first"))
-        stream |= Transformer("//div[@id='mainnav']").wrap(tag.div(class_="banner_wra7pper banner_wrapper_second"))
+        stream |= Transformer("//div[@id='mainnav']").wrap(tag.div(class_="banner_wrapper banner_wrapper_second"))
         stream |= Transformer("//div[@class='banner_wrapper banner_wrapper_first']").append(tag.hr())
         return stream
 

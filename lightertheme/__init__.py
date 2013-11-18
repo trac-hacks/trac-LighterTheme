@@ -15,7 +15,7 @@ class Theme(Component):
 
     extra_stylesheets = ListOption(
         'lightertheme', 'extra_stylesheets',
-        'http://fonts.googleapis.com/css?family=Ubuntu')
+        '//fonts.googleapis.com/css?family=Ubuntu')
     main_text_font_family = Option(
         'lightertheme', 'main_text_font_family', 'Ubuntu')
         

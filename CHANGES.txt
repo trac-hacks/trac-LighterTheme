@@ -2,6 +2,13 @@
 Changes
 =======
 
+0.3.1 (18 Nov 2013)
+-------------------
+
+Include off-site stylesheet (Google Font) using protocol-relative 
+URL so that the theme works on HTTPS installations as well as HTTP.
+Patch from Jun Omae, http://trac-hacks.org/ticket/11391
+
 0.3.0 (02 Oct 2012)
 -------------------
 

@@ -21,11 +21,10 @@ setup(name='trac-LighterTheme',
       keywords='trac plugin',
       license="BSD",
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests*']),
-      include_package_data=True,
+      package_data={'lightertheme': ['templates/lightertheme/*']},
       zip_safe=False,
       entry_points = """
       [trac.plugins]
       lightertheme = lightertheme
       """,
       )
-
